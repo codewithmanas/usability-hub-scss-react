@@ -1,25 +1,27 @@
 // header-section
 .header {
     padding: 50px var(--padding-inline-section) 0;
-}
 
-.header__section {
-    justify-content: center;
-    gap: 50px;
-}
+    &__section {
+        justify-content: center;
+        gap: 50px;
+    }
 
-.header__left {
-    max-width: 40vw;
-}
+    &__left {
+        max-width: 40vw;
 
-.header__left h1 {
-    margin-top: 20px;
-}
+        h1 {
+            margin-top: 20px;
+        }
+    }
 
-.get-started-btn {
-    margin-top: 20px;
-}
+    &__cta {
+        margin-top: 20px;
+    }
 
-.header__right img {
-    width: 600px;
+    &__right {
+        img {
+            width: 600px;
+        }
+    }
 }

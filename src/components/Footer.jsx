@@ -8,7 +8,7 @@ const Footer = () => {
         <a href="#" className="company__logo">
           <img src={CompanyLogo} alt="company logo" />
         </a>
-        <div className="link__column flex">
+        <div className="footer__link__column flex">
           <h4>Product</h4>
           <a href="#" className="hover-link">
             Overview
@@ -32,7 +32,7 @@ const Footer = () => {
             Book a demo
           </a>
         </div>
-        <div className="link__column flex">
+        <div className="footer__link__column flex">
           <h4>Methodologies</h4>
           <a href="#" className="hover-link">
             Card sorting
@@ -54,7 +54,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="link__column flex">
+        <div className="footer__link__column flex">
           <h4>Resources</h4>
           <a href="#" className="hover-link">
             Blog

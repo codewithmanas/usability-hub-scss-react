@@ -4,9 +4,9 @@
 .sub__footer {
     background-color: #B9CDE4;
     padding: var(--padding-inline-section);
-}
 
-.sub__footer__container {
-    justify-content: center;
-    gap: 30px;
+    &__container {
+        justify-content: center;
+        gap: 30px;
+    }
 }

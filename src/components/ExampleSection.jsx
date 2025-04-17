@@ -17,7 +17,7 @@ const ExampleSection = () => {
   ];
 
   return (
-    <section className="examples__section">
+    <section className="examples">
       <div className="container">
         <div className="examples__header">
           <h2 className="examples__heading__text">
@@ -30,7 +30,7 @@ const ExampleSection = () => {
         <div className="examples__area flex">
           {exampleCards.map((card, index) => (
             <a href="#" key={index} className="examples__card">
-              <h3 className="card__text">{card.text}</h3>
+              <h3 className="examples__card__text">{card.text}</h3>
             </a>
           ))}
         </div>

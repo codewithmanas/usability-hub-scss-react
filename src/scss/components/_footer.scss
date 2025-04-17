@@ -1,17 +1,17 @@
 // footer
 
 .footer {
-    padding-block: 80px;
-    background-color: #EBF2FA;
-}
+  padding-block: 80px;
+  background-color: #ebf2fa;
 
-.link__column {
+  &__container {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__link__column {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-}
-
-.footer__container {
-    justify-content: space-between;
-    align-items: flex-start;
+  }
 }

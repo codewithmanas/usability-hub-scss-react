@@ -1,0 +1,15 @@
+// companies-section
+.companies__header {
+    text-align: center;
+    margin-block: 30px;
+    color: var(--primary-text-color);
+}
+
+.companies__logos {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.companies__logo {
+    height: 46px;
+}

@@ -1,0 +1,19 @@
+// big feature section
+
+.big__feature__section {
+    padding: 30px var(--padding-inline-section) 0;
+
+}
+
+.big__feature__container {
+    gap: 30px;
+}
+
+.feature__img img {
+    width: 100%;
+}
+
+.feature__desc {
+    flex-direction: column;
+    align-items: flex-start;
+}

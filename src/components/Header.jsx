@@ -12,7 +12,7 @@ const Header = () => {
             guesswork out of design decisions by validating them with real
             users.
           </p>
-          <a href="#" className="primary-button get-started-btn">
+          <a href="#" className="primary-button header__cta">
             Get started
           </a>
         </div>

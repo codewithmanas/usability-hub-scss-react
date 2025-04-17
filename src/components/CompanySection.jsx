@@ -20,7 +20,7 @@ const CompanySection = () => {
     ]
 
   return (
-    <section className="companies__section">
+    <section className="companies">
       <div className="container">
         <div className="small-bold-text companies__header">
           The world's best companies rely on UsabilityHub to make better design

@@ -31,12 +31,12 @@ const BigFeatureSection = () => {
   return (
     <>
       {bigFeatures.map((feature, index) => (
-        <section key={index} className="big__feature__section">
-          <div className={`container ${index % 2 == 0 ? "flex" : "reverse-flex"} big__feature__container`}>
-            <div className="feature__img">
+        <section key={index} className="big__features">
+          <div className={`container ${index % 2 == 0 ? "flex" : "reverse-flex"} big__features__container`}>
+            <div className="big__features__img">
               <img src={feature.logo} alt="writing image" />
             </div>
-            <div className="feature__desc flex">
+            <div className="big__features__desc flex">
               <h4>{feature.heading}</h4>
               <h3>{feature.subHeading}</h3>
               <p>{feature.description}</p>

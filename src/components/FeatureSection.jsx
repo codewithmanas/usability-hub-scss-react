@@ -45,7 +45,7 @@ const FeatureSection = () => {
     ]
 
   return (
-    <section className="features__section">
+    <section className="features">
       <div className="container">
         <div className="features__header">
           <h2 className="features__heading__text">

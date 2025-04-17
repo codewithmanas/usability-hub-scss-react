@@ -3,12 +3,12 @@ import Logo from "../assets/asset_1.png";
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className="nav">
       <div className="container flex nav__container">
-        <a href="#" className="company-logo">
+        <a href="#" className="nav__company-logo">
           <img src={Logo} alt="company logo" />
         </a>
-        <div className="nav-links">
+        <div className="nav__links">
           <ul className="flex">
             <li>
               <a href="#" className="hover-link">

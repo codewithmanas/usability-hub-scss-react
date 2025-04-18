@@ -1,20 +1,22 @@
 import React from "react";
 import Logo from "../assets/asset_1.png";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "motion/react";
 
 const Navbar = () => {
   return (
     <nav className="nav">
-      <div className="container flex nav__container">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { duration: 2 } }} className="container flex nav__container">
         <a href="#" className="nav__company-logo">
           <img src={Logo} alt="company logo" />
         </a>
         <div className="nav__links">
           <ul className="flex">
-            <li>
+            <motion.li whileHover={{ scale: 1.1, transition: { duration: 0.5 }}}>
               <a href="#" className="hover-link">
                 Products
               </a>
-            </li>
+            </motion.li>
             <li>
               <a href="#" className="hover-link">
                 Customer
@@ -42,7 +44,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
     </nav>
   );
 };

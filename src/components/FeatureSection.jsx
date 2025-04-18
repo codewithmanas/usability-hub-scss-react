@@ -6,6 +6,8 @@ import FeatureLogo4 from "../assets/asset_15.svg";
 import FeatureLogo5 from "../assets/asset_16.svg";
 import FeatureLogo6 from "../assets/asset_17.svg";
 import FeatureCard from "./FeatureCard";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "motion/react";
 
 const FeatureSection = () => {
 
@@ -44,6 +46,21 @@ const FeatureSection = () => {
         },
     ]
 
+    const containerVariants = {
+      hidden: {},
+      visible: {
+        transition: {
+          delayChildren: 0.2,
+          staggerChildren: 0.2
+        }
+      }
+    }
+
+    const childVariants = {
+      hidden: { opacity: 0, scale: 0.8, y: 100 },
+      visible: { opacity: 1, scale: 1, y: 0 }
+    }
+ 
   return (
     <section className="features">
       <div className="container">
@@ -56,13 +73,20 @@ const FeatureSection = () => {
           </a>
         </div>
 
-        <div className="features__area flex">
+        <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="features__area flex"
+        >
                 {
                     features.map((feature, index) => (
-                        <FeatureCard key={index} {...feature} />
+
+                        <FeatureCard key={index}  {...feature} childVariants={childVariants}  />
                     ))
                 }
-        </div>
+        </motion.div>
       </div>
     </section>
   );

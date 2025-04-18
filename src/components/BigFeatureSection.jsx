@@ -2,6 +2,8 @@ import React from "react";
 import FeatureLogo1 from "../assets/asset_18.png";
 import FeatureLogo2 from "../assets/asset_21.png";
 import FeatureLogo3 from "../assets/asset_24.png";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "motion/react";
 
 const BigFeatureSection = () => {
   const bigFeatures = [
@@ -31,18 +33,26 @@ const BigFeatureSection = () => {
   return (
     <>
       {bigFeatures.map((feature, index) => (
-        <section key={index} className="big__features">
+        <motion.section 
+        initial={{ opacity: 0, y: 200 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+        viewport={{ once: true }}
+        key={index} className="big__features">
           <div className={`container ${index % 2 == 0 ? "flex" : "reverse-flex"} big__features__container`}>
             <div className="big__features__img">
               <img src={feature.logo} alt="writing image" />
             </div>
-            <div className="big__features__desc flex">
+            <motion.div 
+            initial={{ x: `${index % 2 == 0 ? "100%" : "-100%"}` }}
+            whileInView={{ x: 0, transition: { duration: 1 } }}
+            viewport={{ once: true }}
+            className="big__features__desc flex">
               <h4>{feature.heading}</h4>
               <h3>{feature.subHeading}</h3>
               <p>{feature.description}</p>
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
       ))}
     </>
   );

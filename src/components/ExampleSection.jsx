@@ -1,4 +1,6 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "motion/react";
 
 const ExampleSection = () => {
   const exampleCards = [
@@ -16,6 +18,23 @@ const ExampleSection = () => {
     },
   ];
 
+  // Parent variant to control stagger
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2, // Time delay between each card animation
+      },
+    },
+  };
+
+
+    // Each card's animation
+    const cardVariants = {
+      hidden: { y: 200 },
+      visible: { y: 0 },
+    };
+
   return (
     <section className="examples">
       <div className="container">
@@ -27,13 +46,25 @@ const ExampleSection = () => {
             See more examples <i className="fa-solid fa-right-long"></i>
           </a>
         </div>
-        <div className="examples__area flex">
+        <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+        className="examples__area flex">
           {exampleCards.map((card, index) => (
-            <a href="#" key={index} className="examples__card">
+            <motion.a 
+            // initial={{ opacity: 0, y: 200 }}
+            // whileInView={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 1 }}
+            // viewport={{ once: true}}
+            variants={cardVariants}
+            transition={{ duration: 0.8 }}
+            href="#" key={index} className="examples__card">
               <h3 className="examples__card__text">{card.text}</h3>
-            </a>
+            </motion.a>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
